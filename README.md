@@ -1,5 +1,15 @@
 # Instruction-Based Dataset Generation and Model Fine-Tuning in LLMs
 
+## Setup
+
+To set up the project, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/fatemehhaji/fine-tuning_LLMs.git
+2. Create and activate a Virtual Environment.
+3. Install Dependencies
+   
 ## Objective
 This project explores the process of generating an instruction-based dataset. We fine-tuned a pre-trained model using this new dataset and compared its performance with a version fine-tuned on both this dataset and Alpaca. Additionally, we tested the model's behavior using general-purpose instructions.
 ## Tasks Overview
