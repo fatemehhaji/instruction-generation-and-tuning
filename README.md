@@ -13,9 +13,9 @@ To set up the project, follow these steps:
 ## Objective
 This project explores the process of generating an instruction-based dataset. We fine-tuned a pre-trained model using this new dataset and compared its performance with a version fine-tuned on both this dataset and Alpaca. Additionally, we tested the model's behavior using general-purpose instructions.
 ## Tasks Overview
-1. **Instruction-Based Dataset Generation**: We transformed a non-instruction-based dataset into an instruction-based format using GPT-4.
-2. **Model Fine-Tuning**: We fine-tuned a pre-trained Large Language Model (LLM) using both the newly created instruction-based dataset and a combination of this dataset with Alpaca.
-3. **Comparison and Analysis**: We evaluated the performance of the fine-tuned models and the original pre-trained model, focusing on their ability to generate relevant responses based on new instructions.
+1. **Instruction-Based Dataset Generation**: Transformed a non-instruction-based dataset into an instruction-based format using GPT-4.
+2. **Model Fine-Tuning**: Fine-tuned a pre-trained Large Language Model (LLM) using both the newly created instruction-based dataset and a combination of this dataset with Alpaca.
+3. **Comparison and Analysis**: Evaluated the performance of the fine-tuned models and the original pre-trained model, focusing on their ability to generate relevant responses based on new instructions.
 
 ## Dataset and Model Details
 - **Original Dataset Source**: The process of adding GPT-4 generated instructions to the data is in the code, and since the dataset is from Hugging Face, everything is included.
@@ -39,6 +39,8 @@ Three models were assessed based on precision, recall, F1 score, and accuracy:
 | **Mistral-7B-Sentiment-Tuned**         | 0.9048    | 0.8261 | 0.8636   | 0.8800   |
 | **Mistral-7B-Instruct-v0.2**           | 0.8000    | 0.8696 | 0.8333   | 0.8400   |
 
+Fine-tuning with the sentiment dataset significantly enhanced precision and accuracy, improving the model's ability to detect sentiments correctly.
+
 ### Alpaca Dataset Results
 | Model                              | Perplexity | BLEU    | ROUGE-L | BERTScore |
 |------------------------------------|------------|---------|---------|-----------|
@@ -46,7 +48,8 @@ Three models were assessed based on precision, recall, F1 score, and accuracy:
 | **Mistral-7B-Instruct-Sentiment-Tuned** | 6.9803 | 0.06092 | 0.1918  | 0.8668    |
 | **Mistral-7B-Sentiment-Tuned**     | 11.6970    | 0.02733 | 0.0652  | 0.2647    |
 
-Fine-tuning with the sentiment dataset significantly enhanced precision and accuracy, improving the model's ability to detect sentiments correctly.
+**Mistral-7B-Instruct-v0.2** exhibited higher BLEU, ROUGE-L, and BERTScore values, indicating that fine-tuning on the sentiment dataset compromised the models' generalization abilities for the Alpaca dataset tasks.
+
 
 ### Out-of-Sample Instructions and Comparisons
 We generated 10 completely out-of-sample instructions to test the models' generalization ability. These instructions were unrelated to the original training data.
