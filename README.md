@@ -18,7 +18,7 @@ This project explores the process of generating an instruction-based dataset. We
 3. **Comparison and Analysis**: We evaluated the performance of the fine-tuned models and the original pre-trained model, focusing on their ability to generate relevant responses based on new instructions.
 
 ## Dataset and Model Details
-- **Original Dataset Source**: [Link to dataset](#)
+- **Original Dataset Source**: The process of adding GPT-4 generated instructions to the data is in the code, and since the dataset is from Hugging Face, everything is included.
 - **Models Used**:
   - **Original Pre-trained Model**: [mistralai/Mistral-7B-Instruct-v0.2](#)
   - **Fine-tuned Models**: 
