@@ -1,4 +1,4 @@
-# Instruction-Based Dataset Generation and Model Fine-Tuning in LLMs
+# Instruction-Based Dataset Generation and LLM Fine-Tuning
 
 ## Setup
 
@@ -6,7 +6,7 @@ To set up the project, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/fatemehhaji/fine-tuning_LLMs.git
+   git clone https://github.com/fatemehhaji/instruction_generation_and_tuning.git
 2. Create and activate a Virtual Environment.
 3. Install Dependencies
    
@@ -50,9 +50,10 @@ Fine-tuning with the sentiment dataset significantly enhanced precision and accu
 
 ### Out-of-Sample Instructions and Comparisons
 We generated 10 completely out-of-sample instructions to test the models' generalization ability. These instructions were unrelated to the original training data.
+The responses are in the `results/responses.json` file.
 
 - **Original Pre-trained Model**: Showed strong generalization, providing contextually relevant responses for most instructions.
-- **Mistral-7B-Instruct-Sentiment-Tuned**: While able to handle some of the out-of-sample instructions well, responses were sometimes overly influenced by fine-tuning.
+- **Mistral-7B-Instruct-Sentiment-Tuned**: While able to handle some of the out-of-sample instructions well, responses were sometimes influenced by fine-tuning.
 - **Mistral-7B-Sentiment-Tuned**: Exhibited noticeable degradation in generalization, producing more specific responses that often failed to appropriately address the instruction.
 
 ### Further Steps
@@ -62,5 +63,5 @@ To enhance generalizability and performance:
 - **Continual Learning**: Incremental fine-tuning while retaining prior knowledge.
 
 ## References
-- Data sources: [Original Data Source](carblacac/twitter-sentiment-analysis)
+- Data sources: [Original Data Source](https://huggingface.co/datasets/carblacac/twitter-sentiment-analysis)
 
