@@ -20,7 +20,7 @@ This project explores the process of generating an instruction-based dataset. We
 ## Dataset and Model Details
 - **Original Dataset Source**: The process of adding GPT-4 generated instructions to the data is in the code, and since the dataset is from Hugging Face, everything is included.
 - **Models Used**:
-  - **Original Pre-trained Model**: [mistralai/Mistral-7B-Instruct-v0.2](#)
+  - **Original Pre-trained Model**: [mistralai/Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2)
   - **Fine-tuned Models**: 
     - Fine-tuned on instruction-based dataset. (Mistral-7B-Sentiment-Tuned)
     - Fine-tuned on combined dataset. (Mistral-7B-Instruct-Sentiment-Tuned)
